@@ -108,6 +108,10 @@ video {
 
 .content__video-card-description-container {
   flex-grow: 1;
+  overflow: hidden;
+  line-height: 1.8;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 } 
 .more-button {
   width: 100%;
@@ -127,6 +131,77 @@ video {
   gap: 30px;
 }/*делает отступ элементам с видосами*/
 
+/*ШАГ 3*/
+
+.search-form__fieldset-title {
+  font-family: Fira Sans Condensed;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.title {
+  font-family: Oswald;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 75px;
+  leading-trim: NONE;
+  line-height: 94%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}/*меняет заголовок*/
+.content__accent {
+  color: #545050;
+}/*меняет первую фразу заголовка*/
+
+.content__card-link {
+  font-family: Oswald;
+  font-style: Bold;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}/*меняет заголовки карточек*/
+
+.content__video-card-description {
+  font-family: Fira Sans Condensed;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 16.2px;
+  letter-spacing: 0%;
+  text-transform: none;
+}/*меняет описание карточек*/
+
+.content__video-card-title {
+  overflow: hidden;
+  line-height: 1.8;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.content__video-card-description {
+  overflow: hidden;
+  line-height: 1.8;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}/*прячет текст в ...*/
+
+/*ШАГ 4*/
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}/*скрывает не нужное*/
 
 
 /**/
