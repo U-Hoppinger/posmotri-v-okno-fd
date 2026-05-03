@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -49,3 +52,81 @@ ol {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
+.content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-end;
+  width: 100%;
+  max-height: 534px;
+  padding: 0;
+}
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+} 
+.content__list-container {
+  height: 300px; /*возможнго корректировать*/
+  overflow: auto;
+}
+.content__details { 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 399px;
+
+}
+.title {
+  margin-bottom: 26px;
+}
+.result { 
+  width: 711px;
+}
+.result__video-container {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 16px;
+  object-fit: contain;
+} /*что-то непонятное из 2 шага*/
+
+video {
+  object-fit: cover;
+  width: 711px;
+}
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+
+}/*распологает видосы(карточки) и описание в одну строчку и прижимает к верху*/
+
+.content__list-container {
+  width: 100%;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+} 
+.more-button {
+  width: 100%;
+} /*растягивает кнопку в ширину блока*/
+
+.content__video-card-thumbnail {
+  max-height: 103px;
+  max-width: 390px;
+  object-fit: contain;
+  object-position: right;
+}/*задает минимальную высоту и ширину для изображения видоса*/
+
+
+.content__list:has(li) {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}/*делает отступ элементам с видосами*/
+
+
+
+/**/
