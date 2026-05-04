@@ -194,15 +194,22 @@ video {
 
 /*ШАГ 4*/
 
+
+
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
   block-size: 1px;
   overflow: hidden;
-  clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0 );
   clip-path: inset(50%);
   white-space: nowrap;
 }/*скрывает не нужное*/
+
+
+
+
 
 .search-form__checkbox-list {
   display: flex;
@@ -212,6 +219,7 @@ video {
 .search-form__pseudo-checkbox {
   border: #fff;
   padding: 1px;
+  border: 1px;
 }
 .search-form__pseudo-checkbox::after {
   content: '';
@@ -224,15 +232,7 @@ video {
   opacity: 1;
 }
 
-/*.search-form__label:nth-child(n + 2):hover {
-  width: 100%;
-  text-decoration: underline;
-} подчеркивание при наведении - доделай
 
-.search-form__checkbox-list:has(.search-form__label):hover {
-  width: 100%;
-  text-decoration: underline;
-}*/
 
 .search-form__label {
   display: flex;
@@ -284,5 +284,66 @@ video {
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
+}
+
+/*step 6*/
+
+.content__card-link {
+  display: block;
+}
+.content__card-link_current:active {
+  background-color: #545050;
+}
+.content__card-link_current:hover {
+  text-decoration: underline;
+}
+.content__card-link_current:focus {
+  outline: none;
+}
+.content__card-link_current:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+.content__list-item { 
+  padding-left: 3px;
+  padding-right: 3px;
+}
+input, a, button {
+  cursor: pointer;
+}
+
+.search-form__label:hover {
+  width: 100%;
+  text-decoration: underline;
+} 
+
+.search-form__checkbox-list:has(.search-form__label):hover {
+  width: 100%;
+  text-decoration: underline;
+}
+
+.search-form__checkbox:checked {
+  opacity: 1;
+}
+
+.result__video-container {
+  position: relative;
+  overflow: hidden;
+}
+.content__list-container {
+  position: relative;
+  overflow: hidden;
+}
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 /**/
