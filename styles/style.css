@@ -10,15 +10,15 @@ html {
 
 .page {
   display: flex;
-  align-items: center;
   justify-content: center;
-  inline-size: 1200px;
-  block-size: 100%;
+  align-items: center;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1140px;
+  block-size: 100%;
 }
 
 h1,
@@ -50,292 +50,281 @@ ol {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
+
 .content {
   display: flex;
-  gap: 30px;
   align-items: flex-end;
+  gap: 30px;
   width: 100%;
   max-height: 534px;
   padding: 0;
 }
+
 .search-form {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   max-width: 711px;
-  padding-bottom: 10px;
-} 
-.content__list-container {
-  height: 399px;
-  overflow: auto;
-  width: 100%;
 }
-.content__details { 
+
+.content__list-container {
+  position: relative;
+  display: grid;
+  gap: 30px;
+  width: 100%;
+  max-height: 298px;
+  overflow: auto;
+}
+
+.content__details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   max-width: 100%;
-  max-height: 534px;
 }
-.title {
-  margin-bottom: 15px;
-}
-.result { 
+
+.result {
   width: 711px;
-  max-height: 456px;
 }
+
 .result__video-container {
+  position: relative;
   max-width: 711px;
-  max-height: 386px;
   margin-bottom: 16px;
   object-fit: cover;
-} /*что-то непонятное из 2 шага*/
-
-video {
-  object-fit: cover;
-  width: 711px;
+  overflow: hidden;
 }
+
+.result__video {
+  width: 711px;
+  max-height: 386px;
+  object-fit: cover;
+}
+
 .content__video-card {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-}/*распологает видосы(карточки) и описание в одну строчку и прижимает к верху*/
-
+  max-width: 399px;
+}
 
 .content__video-card-description-container {
   flex-grow: 1;
-  overflow: hidden;
-  max-height: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   gap: 5px;
-} 
-.more-button {
-  width: 100%;
-} /*растягивает кнопку в ширину блока*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .content__video-card-thumbnail {
-  max-height: 103px;
   max-width: 194px;
+  max-height: 103px;
   object-fit: contain;
   object-position: right;
-}/*задает минимальную высоту и ширину для изображения видоса*/
-
+}
 
 .content__list:has(li) {
   display: flex;
   flex-direction: column;
   gap: 30px;
-}/*делает отступ элементам с видосами*/
-
-/*ШАГ 3*/
-.search-form__fieldset {
-  max-weight: 212px;
 }
-.search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  leading-trim: NONE;
-  line-height: 100%;
+.search-form__fieldset {
   border: none;
 }
-.title {
-  font-family: Oswald;
-  font-weight: 700;
-  font-style: Bold;
-  font-size: 75px;
-  leading-trim: NONE;
-  line-height: 94%;
-  
-  text-transform: uppercase;
-}/*меняет заголовок*/
-.content__accent {
-  color: #545050;
-}/*меняет первую фразу заголовка*/
 
-.content__card-link {
-  font-family: Oswald;
-  font-style: Bold;
-  leading-trim: NONE;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: white;
-}/*меняет заголовки карточек*/
-
-.content__video-card-description {
-  font-family: 'Fira Sans' Condensed;
+.search-form__fieldset-title {
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
-  font-style: Regular;
   font-size: 18px;
-  leading-trim: NONE;
-  line-height: 16.2px;
-  text-transform: none;
-  overflow: hidden;
-  line-height: 1.8;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  margin-bottom: 20px;
-}/*меняет описание карточек*/
-
-.content__video-card-title {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: 30px;
+  margin-bottom: 5px;
 }
 
-/*ШАГ 4*/
+.title {
+  margin-bottom: 15px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  display: block;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
+  text-transform: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content__video-card-title {
+  max-width: 196px;
+  overflow: hidden;
+  font-size: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .visually-hidden {
   position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
   inline-size: 1px;
   block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0 );
   clip-path: inset(50%);
   white-space: nowrap;
-}/*скрывает не нужное*/
+}
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 15px;
+  gap: 11px;
 }
 
 .search-form__pseudo-checkbox {
-  padding: 1px;
-  border: 1px solid white;
   width: 19px;
   height: 19px;
+  border: 1px solid white;
+  padding: 1px;
 }
+
 .search-form__pseudo-checkbox::after {
-  content: '';
+  content: "";
   display: block;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   opacity: 0;
   background-color: white;
 }
-.search-form__pseudo-checkbox:checked {
+
+.search-form__checkbox:checked ~ .search-form__pseudo-checkbox::after {
   opacity: 1;
-}
-fieldset {
-  border: none;
 }
 
 .search-form__label {
   display: flex;
   align-items: center;
-  width: fit-content;
   gap: 10px;
-}/**/
+  width: fit-content;
+}
+
 .search-form__textfield {
+  width: 225px;
   border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff; 
   border-right: none;
+  border-bottom: 1px solid #fff;
   color: #fff;
-  background-color: #1B1919;
-  appearance: none;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
-} /*меняем фон кнопки*/
+  background-color: #1b1919;
+  appearance: none;
+}
 
 .search-form__textfield::placeholder {
   color: rgb(255 255 255 / 0.7);
-} /*меняем фон подсказки в кнопке*/
+}
 
-/*5 шаг*/
 .button {
-  background-color: rgb(255 255 255 / 0.0);
-  color: #fff;
+  align-self: flex-end;
+  width: 194px;
+  height: 34px;
   border-color: #fff;
-  font-family: Fira Sans Condensed;
+  color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
-  font-style: Bold;
   font-size: 18px;
   text-align: center;
-  width: 194px;
-  height: 34px;
-}/*настраиваем кнопки*/
-
-.button {
-  width: 194px;
-  height: 34px;
-  align-self: flex-end;
+  background-color: rgb(255 255 255 / 0);
 }
+
 .more-button {
   width: 100%;
-  height: 34px;
 }
+
 .button:hover {
   text-decoration: underline;
 }
+
 .button:active {
   background-color: #545050;
 }
+
 .button:focus {
   outline: none;
 }
+
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
 
-/*step 6*/
-
-.content__card-link {
-  display: block;
-}
 .content__card-link_current {
   background-color: #545050;
 }
+
 .content__list-item:active {
   background-color: #545050;
 }
+
 .content__list-item:hover {
   text-decoration: underline;
 }
+
 .content__list-item:focus {
   outline: none;
 }
+
 .content__list-item:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
-
+.search-form__label-text {
+  font-family: "Fira Sans Condensed", sans-serif;
+}
 
 .search-form__label-text:hover {
   background-color: #545050;
 }
+
 .content__video-card-description-container:hover {
   background-color: #545050;
 }
 
-.content__list-item { 
-  padding-left: 3px;
+.content__list-item {
   padding-right: 3px;
+  padding-left: 3px;
 }
-input, a, button {
+
+input,
+a,
+button {
   cursor: pointer;
 }
 
 .search-form__label:hover {
   width: 100%;
   text-decoration: underline;
-} 
+}
 
 .search-form__checkbox:checked {
   opacity: 1;
-}
-
-.result__video-container {
-  position: relative;
-  overflow: hidden;
-}
-.content__list-container {
-  position: relative;
 }
 
 /**/
