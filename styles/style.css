@@ -300,10 +300,10 @@ ol {
 }
 
 
-.search-form__label:hover {
+.search-form__label:hover 
+.search-form__label-text:hover {
   text-decoration: underline;
   width: 100%;
-  text-decoration: underline;
 }
 
 
